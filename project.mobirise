@@ -1,0 +1,171 @@
+{
+  "settings": {
+    "name": "5731 - PMI PMP - Landing pages 2019 for General",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#93087a",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Roboto",
+        "display1Size": "2.5",
+        "display2Font": "Roboto",
+        "display2Size": "2.4",
+        "display5Font": "Rubik",
+        "display5Size": 1.5,
+        "display7Font": "Roboto",
+        "display7Size": "1.2",
+        "display4Font": "Rubik",
+        "display4Size": "1.4",
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": true
+      },
+      "additionalSetColors": [
+        "#f58634",
+        "#93087a",
+        "#f3f534",
+        "#d700b1"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.10.3",
+    "siteFonts": [
+      {
+        "css": "'Roboto', sans-serif",
+        "name": "Roboto",
+        "url": "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+      }
+    ],
+    "favicon": "",
+    "noImageResize": "",
+    "uniqCompNum": 6,
+    "versionPublish": "4.10.3",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".form-control, .form-control:focus": {
+              "background": "@inputBg",
+              "border": "1px solid @borderColor"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".form-container": {
+              "transition": "all .2s",
+              "border": "1px solid @borderColor",
+              "padding": "1rem",
+              "& when (@bgForm)": {
+                "background": "linear-gradient(@formColor1, @formColor2)",
+                "border": "none"
+              }
+            },
+            "textarea.form-control": {
+              "min-height": "188px"
+            },
+            ".input-group-btn": {
+              "justify-content": "center",
+              "-webkit-justify-content": "center"
+            },
+            ".content-container when not (@reverseContent)": {
+              "@media (min-width: 768px)": {
+                "padding-right": "5rem"
+              }
+            },
+            ".row when (@reverseContent)": {
+              "flex-direction": "row-reverse",
+              "-webkit-flex-direction": "row-reverse",
+              ".content-container": {
+                "@media (min-width: 768px)": {
+                  "padding-left": "5rem"
+                }
+              }
+            },
+            "H5": {
+              "text-align": "left",
+              "color": "#ffffff"
+            },
+            "H1": {
+              "color": "#ffffff"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "text-align": "right"
+            }
+          },
+          "_name": "header15",
+          "_customHTML": "<section class=\"header15\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\" plugins=\"formstyler, datepicker\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"color\" title=\"Input Background\" name=\"inputBg\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#ffffff\">\n        <input type=\"checkbox\" title=\"Form Background\" name=\"bgForm\">\n        <input type=\"color\" title=\"Form Color 1\" name=\"formColor1\" value=\"#ff7f9f\" condition=\"bgForm\">\n        <input type=\"color\" title=\"Form Color 2\" name=\"formColor2\" value=\"#55b4d4\" condition=\"bgForm\">\n        <input type=\"checkbox\" title=\"Form On Right/Left\" name=\"reverseContent\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/gitika-sinha-pmp-2-2000x1333.png\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#073B4C\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#7f1933\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-right\">\n        <div class=\"row\">\n            <div class=\"mbr-white col-lg-8 col-md-7 content-container\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">PMP<sup>®</sup>\n                <div><span style=\"font-weight: normal;\">The three letters\n</span></div><div><span style=\"font-weight: normal;\">that can make a\n</span></div><div><span style=\"font-weight: normal;\">difference to your\n</span></div><div><span style=\"font-weight: normal;\">project management\n</span></div><div><span style=\"font-weight: normal;\">career</span></div></h1>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Gitika Sinha, PMP<sup>®</sup>\n                </p>\n            </div>\n            <div class=\"col-lg-4 col-md-5\">\n                <div class=\"form-container\">\n                    <div mbr-form class=\"media-container-column\">\n<!--Formbuilder Form-->\n<form action=\"fastwork@ideascape.in\" name=\"Mobirise Form\" method=\"POST\" class=\"mbr-form form-with-styler\">\n<div class=\"row\">\n<div hidden=\"hidden\" data-form-alert class=\"alert alert-success col-12\">Thanks for filling out the form!</div>\n<div hidden=\"hidden\" data-form-alert-danger class=\"alert alert-danger col-12\"> </div>\n</div>\n<div class=\"dragArea row\">\n<div class=\"col-lg-12\">\n<h5 mbr-theme-style=\"display-5\" class=\"mbr-fonts-style\">I WANT TO GET AHEAD IN MY CAREER!</h5>\n</div>\n<div class=\"col-md-12 form-group \" data-for=\"Name*\">\n<input type=\"text\" name=\"Name*\" placeholder=\"Name*\" data-form-field=\"Name\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control px-3\" value>\n</div>\n<div data-for=\"Organization\" class=\"col-lg-12 col-sm-12 form-group\">\n<input type=\"text\" name=\"Organization\" placeholder=\"Organization\" data-form-field=\"Organization\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div data-for=\"Preferred time to call\" class=\"col-lg-12 form-group\">\n<input type=\"text\" name=\"Preferred time to call\" placeholder=\"Preferred time to call\" data-form-field=\"Preferred time to call\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div data-for=\"Mobile* +91\" class=\"col-lg-12 form-group\" style>\n<input type=\"text\" name=\"Mobile* +91\" placeholder=\"Mobile* +91\" data-form-field=\"Mobile* +91\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div data-for=\"Email*\" class=\"col-md-12 form-group \">\n<input type=\"email\" name=\"Email*\" placeholder=\"Email*\" data-form-field=\"Email\" mbr-theme-style=\"display-7\" required=\"required\" class=\"form-control px-3\" value>\n</div>\n<div class=\"col-lg-12 col-sm-12 form-group\" data-for=\"Industry*\">\n<input type=\"text\" name=\"Industry*\" placeholder=\"Industry*\" data-form-field=\"Industry*\" mbr-theme-style=\"display-7\" class=\"form-control\" value>\n</div>\n<div data-for=\"Project Management Experience*\" class=\"col-md-12 form-group \">\n<input type=\"tel\" name=\"Project Management Experience*\" placeholder=\"Project Management Experience*\" data-form-field=\"Phone\" mbr-theme-style=\"display-7\" class=\"form-control px-3\" value>\n</div>\n<div data-for=\"Please select the nearest city for information on Registered Education Providers.\" class=\"col-lg-12 col-sm-12 form-group\">\n<select name=\"Please select the nearest city for information on Registered Education Providers.\" data-form-field=\"Please select the nearest city for information on Registered Education Providers.\" mbr-theme-style=\"display-7\" class=\"form-control\">\n<option value=\"Please select the nearest city for information on Registered Education Providers.\">Please select the nearest city for information on Registered Education Providers.</option>\n<option value=\"Second\">Second</option>\n<option value=\"Third\">Third</option>\n</select>\n</div>\n<div mbr-buttons=\"true\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrBtnMove,-mbrLink,-mbrBtnRemove,-mbrBtnAdd\" class=\"col-md-12 input-group-btn\"><a type=\"submit\" class=\"btn btn-form btn-secondary\" data-app-placeholder=\"Type Text\"><span class=\"mbri-right mbr-iconfont mbr-iconfont-btn\"></span>GET STARTED!</a></div>\n</div>\n</form><!--Formbuilder Form-->\n</div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "rt4WCUFWUd",
+          "_anchor": "header15-0",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 20px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            ".media-container-column .btn-bgr": {
+              "z-index": "0"
+            },
+            ".mbr-overlay": {
+              "background": "linear-gradient(@overlayColor -10%, @overlayColor2 75%)"
+            },
+            "H1": {
+              "color": "#ff3366"
+            }
+          },
+          "_name": "header3",
+          "_customHTML": "<section class=\"header3\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/alesia-kazantceva-283288-unsplash-2000x1333.jpg\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#073B4C\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#1a032d\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#951d19\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-center\">\n            <div class=\"media-container-column mbr-white col-md-10\">\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubtitle\">\n                    Optimize Your\n                </h3>\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\"><span style=\"font-weight: normal;\">Project Management Professional (PMP)<sup>®</sup>\n</span><div><span style=\"font-weight: normal;\">Get proactive. Control your career path.</span></div></h1>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">As a professional working in a project driven environment, it is important that you get up to speed with new project tools, techniques and methodologies. With so many certification options, it’s hard to understand what’s right for you. PMP<sup>®</sup>&nbsp;is among the most renowned, respected and accepted certification for project professionals across the globe. It’s a certification that reinforces your updated knowledge and ability to lead project teams to success. What’s more, a recent survey reveals that PMP<sup>®</sup> certified professionals in India earn 35% more than those who do not have the certification*.<br><br>Get PMP<sup>®&nbsp;</sup>certified. Chart your path. Get ahead in your career.<br><br><i>*Source: Earning Power: Project Management Salary Survey, 10th Edition</i><br></p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-secondary btn-bgr\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\">CLIENTS</a></div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_anchor": "header3-6",
+          "_isUserblock": true,
+          "_sourceTheme": "agencym4",
+          "_cid": "rvHYVPSv24",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
